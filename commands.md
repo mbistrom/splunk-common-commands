@@ -1,22 +1,42 @@
-/opt/splunk/bin
+# Splunk Common Commands
 
-Get Splunk Command BASH Completion:
+## Get Splunk Command BASH Completion:
+
+```bash
 source /opt/splunk/bin/setSplunkEnv
+```
+## Start Splunk:
 
-Start Splunk:
-    splunk start
+```bash
+splunk start
+```
 
-Stop Splunk:
-    splunk stop
+## Stop Splunk:
 
-Reload Deployment server Apps (Stored in /opt/splunk/etc/deployment-apps):
-    splunk reload deploy-server
+```bash
+splunk stop
+```
 
-Validate Indexer Cluster configuration bundle on Cluster master:
-    splunk validate cluster-bundle
+## Reload Deployment server Apps (Stored in /opt/splunk/etc/deployment-apps):
 
-Check Indexer Cluster configuration bundle validation status om Cluster master:
-    splunk show cluster-bundle-status
+```bash
+splunk reload deploy-server
+```
 
-Push Indexer Cluster configuration bundle from Cluster master to indexer peers (Stored in /opt/splunk/etc/master-apps):
-    splunk apply cluster-bundle
+## Validate Indexer Cluster configuration bundle on Cluster master:
+
+```bash
+splunk validate cluster-bundle
+```
+
+## Check Indexer Cluster configuration bundle validation status om Cluster master:
+
+```bash
+splunk show cluster-bundle-status
+```
+
+## Push Indexer Cluster configuration bundle from Cluster master to indexer peers (Stored in /opt/splunk/etc/master-apps):
+
+```bash
+splunk apply cluster-bundle
+```

@@ -1,1 +1,3 @@
-# splunk-common-commands
+# Splunk Common commands
+
+- [Common commands](commands.md)
