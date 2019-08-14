@@ -23,6 +23,7 @@ splunk stop
 splunk set deploy-poll <IP_address/hostname>:<management_port>
 splunk restart
 ```
+Default mamangemet port: 8089
 
 ## Reload Deployment server Apps (Stored in /opt/splunk/etc/deployment-apps):
 
