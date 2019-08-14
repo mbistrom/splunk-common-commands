@@ -17,6 +17,13 @@ splunk start
 splunk stop
 ```
 
+## Configure Forwarder to use a specific deplyment server:
+
+```bash
+splunk set deploy-poll <IP_address/hostname>:<management_port>
+splunk restart
+```
+
 ## Reload Deployment server Apps (Stored in /opt/splunk/etc/deployment-apps):
 
 ```bash
