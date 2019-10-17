@@ -19,14 +19,22 @@ $SPLUNK_HOME/bin/splunk cmd openssl req -new -key mySplunkWebPrivateKey.key -out
 ```
 ## Use the CSR to create a signed certificate on pfSense
 System -> Cert. Manager 
+
 Certificates -> Add/Sign
+
 Method: Sign a Certificate Signing Request
+
 CSR data: <paste contents of CSR>
+
 Certificate Lifetime (days): 825
 (Limited by https://support.apple.com/en-us/HT210176)
+
 Digest Algorithm: sha512
+
 Certificate Type: Server Certificate
+
 Alternative Names -> FQDN or Hostname: <FQDN of the Splunk Web server>
+
 Save 
 
 ## Export the newly created certificate
