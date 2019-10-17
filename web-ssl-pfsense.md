@@ -24,7 +24,7 @@ Certificates -> Add/Sign
 
 Method: Sign a Certificate Signing Request
 
-CSR data: <paste contents of CSR>
+CSR data: \<paste contents of CSR\>
 
 Certificate Lifetime (days): 825
 (Limited by https://support.apple.com/en-us/HT210176)
