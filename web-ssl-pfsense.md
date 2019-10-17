@@ -33,7 +33,7 @@ Digest Algorithm: sha512
 
 Certificate Type: Server Certificate
 
-Alternative Names -> FQDN or Hostname: <FQDN of the Splunk Web server>
+Alternative Names -> FQDN or Hostname: \<FQDN of the Splunk Web server\>
 
 Save 
 
