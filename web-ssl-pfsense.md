@@ -39,11 +39,12 @@ splunk cmd openssl x509 -in mySplunkWebCert.crt -out mySplunkWebCert.pem -outfor
 cat mySplunkWebCert.pem myCACert.pem > mySplunkWebCertificate.pem
 
 ## Edit $SPLUNK_HOME/etc/system/local/web.conf
-Add to the [settings] stanza:
-
+Add to the [settings] stanza: 
+```
 enableSplunkWebSSL = true
 privKeyPath = /opt/splunk/etc/auth/mycerts/mySplunkWebPrivateKey.key
 serverCert = /opt/splunk/etc/auth/mycerts/mySplunkWebCertificate.pem
+```
 
 # Restart Splunk 
 $SPLUNK_HOME/bin/splunk restart splunkd
