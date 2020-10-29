@@ -1,6 +1,10 @@
 # Splunk Common commands
 - [Common commands](commands.md)
 
+# Splunk .config files
+- [inputs.conf](inputs.conf)
+- [props.conf](props.conf)
+
 # Traefik Docker stdout search time extractions
 - [Traefik](traefik-extraction.rex)
 
