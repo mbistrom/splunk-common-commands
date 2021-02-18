@@ -1,6 +1,6 @@
 # Here are the steps to create your own Custom Splunk YUM/DNF repo
 
-- Create Repo Directory mkdir /splunkrepo
+- Create Repo Directory ```mkdir /splunkrepo```
 - Install Nginx and set ```autoindex on;``` in nginx.conf
 - Configure Nginx to use /splunkrepo as root (may have to disable SElinux ```setenforce 0```)
 - Download Splunk RPM:s to /splunkrepo
