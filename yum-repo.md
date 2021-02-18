@@ -7,6 +7,18 @@
 - Install "createrepo" ```yum install createrepo yum-utils```
 - Run ```createrepo /splunkrepo```
 - Create Repo config file and distribute to Splunk servers
+- Make sure file permissions are kept and repo metadata keeps updated
+
+```crontab -e```
+
+```cron
+0 * * * * chown -R nginx:nginx /splunkrepo/
+0 * * * * chmod 755 /splunkrepo
+0 * * * * chmod 644 /splunkrepo/*
+0 * * * * chmod 755 /splunkrepo/repodata
+0 * * * * chmod 644 /splunkrepo/repodata/*
+0 * * * * createrepo /splunkrepo
+```
 
 ## Example Repo File
 
