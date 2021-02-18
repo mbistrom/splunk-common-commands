@@ -1,4 +1,4 @@
-# Here are the steps to create your own Custom Splunk YUM/DNF repo:
+# Here are the steps to create your own Custom Splunk YUM/DNF repo
 
 - Create Repo Directory mkdir /splunkrepo
 - Install Nginx and set ```autoindex on;``` in nginx.conf
@@ -8,7 +8,7 @@
 - Run ```createrepo /splunkrepo```
 - Create Repo config file and distribute to Splunk servers
 
-# Example Repo File
+## Example Repo File
 
 /etc/yum.repos.d/CentOS-Splunk.repo
 
@@ -20,25 +20,30 @@ enabled=1
 gpgcheck=0
 ```
 
-# Testing repo
+## Testing repo
 
 Cleanup of temporary files
+
 ```bash
 dnf clean all
 ```
+
 List repos
+
 ```bash
 dnf repolist
 ```
 
-# Use
+## Use
 
 Install Splunk Universal Forwarder
+
 ```bash
 dnf install splunkforwarder
 ```
 
 Install Splunk Enterprise
+
 ```bash
 dnf install splunk
 ```
