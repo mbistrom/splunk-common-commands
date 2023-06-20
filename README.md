@@ -18,3 +18,7 @@
 ## Create a YUM / DNF-repo for installing and upgrading Splunk components
 
 - [yum-repo](yum-repo.md)
+
+## Renew Splunk server.pem Certificate
+
+- [Renew server.pem](server.pem-renew.md)
