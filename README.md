@@ -22,3 +22,7 @@
 ## Renew Splunk server.pem Certificate
 
 - [Renew server.pem](server.pem-renew.md)
+
+## Set forwarder ACLs
+
+- [ACLs](ACL.md)
