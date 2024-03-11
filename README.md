@@ -2,6 +2,10 @@
 
 - [Common commands](commands.md)
 
+## Splunk SPL snippets
+
+- [SPL snippets](search.md)
+
 ## Splunk .config files
 
 - [inputs.conf](inputs.conf)
