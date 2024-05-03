@@ -27,3 +27,8 @@
 | eval time=strftime(_time, "%A %B %d %Y")
 ```
 ```Friday May 03 2024```
+
+```spl
+| eval time=strftime(_time, "%Y-%m-%dT%H:%M:%S.%Q%z")
+```
+ISO 8601 ```2024-05-03T10:04:17.183+0200``` 
