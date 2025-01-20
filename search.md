@@ -51,3 +51,25 @@ index=netdns sourcetype="MSAD:NT6:DNS"
 | eval is_outlier=if('num_events' < lowerBound OR 'num_events' > upperBound, 1, 0)
 | fields - stdev, - avg
 ```
+
+## Time token - post search
+
+```spl
+| eval tte="$time_token.earliest$"
+| eval tte_orig=tte
+| eval tte=if(match(tte,"now"),0,tte)
+| eval tte=if(tte<1,"1000",tte)
+| eval tte=relative_time(now(),tte)
+| eval tte=if(tte_orig<1,0,tte)
+| eval tte=if(len(tte_orig)>8,tte_orig,tte)
+
+| eval ttl="$time_token.latest$"
+| eval ttl_orig=ttl
+| eval ttl=if(len(ttl)<1,"now",ttl)
+| eval ttl=if(match(ttl,"now"),now(),relative_time(now(),ttl))
+| eval ttl=if(len(ttl_orig)>8,ttl_orig,ttl)
+
+| eval epoch_time=_time
+| eval within=if(epoch_time<ttl AND epoch_time>tte,1,0)
+| where within=1
+```
