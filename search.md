@@ -73,3 +73,28 @@ index=netdns sourcetype="MSAD:NT6:DNS"
 | eval within=if(epoch_time<ttl AND epoch_time>tte,1,0)
 | where within=1
 ```
+
+## Send one email per row, to different recipients
+
+```spl
+BASE SEARCH
+
+| fillnull value="N/A" subject
+| fillnull value="N/A" data
+| fillnull value="N/A" email
+| fillnull value="N/A" bcc
+
+| map 
+    [ 
+    makeresults 
+    | eval subject="$subject$"
+    | eval data="$data$"
+    | eval email="$email$"
+    | eval bcc="$bcc$"
+    | search subject=* data=* email=* bcc=* email!="N/A"
+    | fields - _time 
+    | table data email
+    | sendemail to="$email$" bcc="$bcc$" subject="$subject$" message="Subject:\n$subject$\nData:$data$\n" format=table content_type=html sendresults=true inline=true 
+    ] 
+    maxsearches=128
+```
