@@ -98,3 +98,29 @@ BASE SEARCH
     ] 
     maxsearches=128
 ```
+
+## 🗺️Map tile providers
+
+### satellite_tiles
+
+```http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}```
+
+### openstreetmap_tiles
+
+```http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png```
+
+### light_tiles
+
+```http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png```
+
+### dark_tiles
+
+```http://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png```
+
+### splunk
+
+```/splunkd/__raw/services/mbtiles/splunk-tiles/{z}/{x}/{y}```
+
+### splunk_dark
+
+```/splunkd/__raw/services/mbtiles/splunk-tiles-dark/{z}/{x}/{y}```
