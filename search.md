@@ -124,3 +124,7 @@ BASE SEARCH
 ### splunk_dark
 
 ```/splunkd/__raw/services/mbtiles/splunk-tiles-dark/{z}/{x}/{y}```
+
+### Carto "Dark Matter"
+
+```https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_all/{z}/{x}/{y}.png```
