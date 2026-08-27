@@ -101,6 +101,10 @@ BASE SEARCH
 
 ## 🗺️Map tile providers
 
+### dark_tile (ArcIGS)
+
+```https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}```
+
 ### satellite_tiles
 
 ```http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}```
